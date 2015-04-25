@@ -91,7 +91,7 @@ $rows=fetchAll($_SESSION['link'], $sql);
 				</a>
 			</div>
 			<div class="col w5 last right bottomlast">
-				<p class="last">Welcome <span class="strong"><?php echo $_SESSION['adminName']; ?></span>, Logged in as <span class="strong">Admin</span>, <a href="adminLogin.php">Logout</a></p>
+				<p class="last">Welcome <span class="strong"><?php echo $_SESSION['adminName']; ?></span>, Logged in as <span class="strong">Admin</span>, <a href="index.php">Logout</a></p>
 			</div>
 			<div class="clear"></div>
 		</div>

@@ -10,15 +10,21 @@ $year=$_POST['year'];
 $price=$_POST['price'];
 $number=$_POST['number'];
 
-$sql="select * from Book where ISBN=$ISBN";
-$res=fetchOne($_SESSION['link'], $sql);
-if (is_null($res))
-	insertBook($_SESSION['link'], "Book", $_POST);
-else
-	updateNum($_SESSION['link'], "Book", $number, $ISBN);
+$isZ='/^\+?[1-9][0-9]*$/';
+$isR='/^\d+(\.\d+)?$/';
 
-$sql="select * from Book";
-$rows=fetchAll($_SESSION['link'], $sql);
+if (preg_match($isZ, $ISBN) && preg_match($isZ, $year) && preg_match($isZ, $number) && preg_match($isR, $price)) {
+	$sql="select * from Book where ISBN=$ISBN";
+	$res=fetchOne($_SESSION['link'], $sql);
+	if (is_null($res))
+		insertBook($_SESSION['link'], "Book", $_POST);
+	else
+		updateNum($_SESSION['link'], "Book", $number, $ISBN);
+
+	$sql="select * from Book";
+	$rows=fetchAll($_SESSION['link'], $sql);
+} else
+	alertMes("invalid information!", "addBooks.php");
 
 ?>
 
@@ -49,7 +55,7 @@ $rows=fetchAll($_SESSION['link'], $sql);
 				</a>
 			</div>
 			<div class="col w5 last right bottomlast">
-				<p class="last">Welcome <span class="strong"><?php echo $_SESSION['adminName']; ?></span>, Logged in as <span class="strong">Admin</span>, <a href="adminLogin.php">Logout</a></p>
+				<p class="last">Welcome <span class="strong"><?php echo $_SESSION['adminName']; ?></span>, Logged in as <span class="strong">Admin</span>, <a href="index.php">Logout</a></p>
 			</div>
 			<div class="clear"></div>
 		</div>

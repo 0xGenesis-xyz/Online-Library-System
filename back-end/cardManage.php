@@ -16,7 +16,6 @@ if (empty($_SESSION['adminID']))
 		<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/global.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/modal.js" type="text/javascript" charset="utf-8"></script>
-		<script src="js/jquery.leanModal.min.js" type="text/javascript" charset="utf-8"></script>
 
 		<script>
 			$(document).ready(function(){
@@ -32,7 +31,7 @@ if (empty($_SESSION['adminID']))
 				</a>
 			</div>
 			<div class="col w5 last right bottomlast">
-				<p class="last">Welcome <span class="strong"><?php echo $_SESSION['adminName']; ?></span>, Logged in as <span class="strong">Admin</span>, <a href="adminLogin.php">Logout</a></p>
+				<p class="last">Welcome <span class="strong"><?php echo $_SESSION['adminName']; ?></span>, Logged in as <span class="strong">Admin</span>, <a href="index.php">Logout</a></p>
 			</div>
 			<div class="clear"></div>
 		</div>

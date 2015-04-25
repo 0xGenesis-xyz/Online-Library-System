@@ -17,7 +17,7 @@ if (is_null($certainBook)) {
 	$res=fetchOne($_SESSION['link'], $sqlDate);
 	echo mysqli_error($_SESSION['link'])."<br>";
 
-	$sqlBook="select * from Record where ISBN=$bookNum";
+	$sqlBook="select * from Book where ISBN=$bookNum";
 	$resBook=fetchOne($_SESSION['link'], $sqlBook);
 	if (is_null($resBook))
 		alertMes("The book is not available! Please report to the administer. We will make a purchase as soon as possible.", "borrow.php");

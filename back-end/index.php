@@ -13,8 +13,6 @@ unset($_SESSION['adminName']);
 		<meta name="description" content="" />
 		<title>Online Library System</title>
 		<link rel="stylesheet" href="css/index.css" type="text/css" media="screen" charset="utf-8" />
-<!--		<link rel="stylesheet" href="css/reset.css" type="text/css" media="screen" charset="utf-8" />
-		<link rel="sytlesheet" href="css/supersized.css" type="text/css" media="screen" charset="utf-8" />-->
 	</head>
 	<body>
 		<div class="page-container">
@@ -32,20 +30,6 @@ unset($_SESSION['adminName']);
                 <button type="submit">Login</button>
                 <div class="error"><span>+</span></div>
             </form>
-<!--            <div class="connect">
-                <p>Or connect with:</p>
-                <p>
-                    <a class="facebook" href=""></a>
-                    <a class="twitter" href=""></a>
-                </p>
-            </div>
--->
         </div>
-		
-        <!-- Javascript 
-        <script src="js/jquery-1.8.2.min.js"></script>
-        <script src="js/supersized.3.2.7.min.js"></script>
-        <script src="js/supersized-init.js"></script>
-        <script src="js/scripts.js"></script> -->
 	</body>
 </html>
